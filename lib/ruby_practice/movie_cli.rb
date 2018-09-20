@@ -5,7 +5,7 @@ class MovieCLI
   end
 
   def list_movies
-    puts "These are the movies of today!"
+    puts "Now Playing: All Of These Great Movies!"
     MovieScraper.new.scrape_movies
     list
   end
@@ -16,6 +16,7 @@ class MovieCLI
 
   def movie
     puts "To see more info on a specific movie, enter the number of that movie."
-    
+    input = nil
+
   end
 end
