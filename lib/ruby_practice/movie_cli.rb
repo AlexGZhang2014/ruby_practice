@@ -5,6 +5,7 @@ class MovieCLI
 
   def list_movies
     puts "These are the movies of today!"
+    MovieScraper.new.movies
     list
   end
 
