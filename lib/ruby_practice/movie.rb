@@ -3,10 +3,9 @@ class Movie
 
   @@movies = []
 
-  def initialize(name, link = nil, description = nil)
+  def initialize(name, link = nil)
     @name = name
     @link = link
-    @description = description
     @@movies << self
   end
 
