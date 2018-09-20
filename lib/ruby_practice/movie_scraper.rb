@@ -5,11 +5,10 @@ class MovieScraper
   end
 
   def scrape_movies
-    index = 0
     @movies.each do |movie|
-      until index = @movies.size
-        name = @movies.css()
-      end
+      name = movie.css("div.title").text
+      link = movie.css("a").attr("href").value
+      new_movie = Movie.new(name, link)
     end
   end
 end
