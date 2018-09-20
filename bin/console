@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "ruby_practice"
+require_relative "../config/environment.rb"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -11,4 +11,5 @@ require "ruby_practice"
 # Pry.start
 
 require "irb"
-IRB.start(__FILE__)
+# IRB.start(__FILE__)
+MovieCLI.new.start_app
