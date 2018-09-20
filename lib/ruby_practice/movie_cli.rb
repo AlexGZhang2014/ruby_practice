@@ -18,12 +18,14 @@ class MovieCLI
     puts "To see more info on a specific movie, enter the number of that movie. Otherwise, type \'exit\' when you are done."
     input = nil
     num_of_movies = Movie.all.size
+    movies = Movie.all
     until input == "exit"
       input = gets.strip
       movie_num = input.to_i
-      binding.pry
       if movie_num > 0 && movie_num <= num_of_movies
-        puts "yay"
+        movie = movies[movie_num-1]
+        puts "#{movie.name}"
+        puts "Go to the following link to see the full details of this movie: https://www.regmovies.com#{movie.link}"
       end
     end
   end
