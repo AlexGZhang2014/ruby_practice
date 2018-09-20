@@ -1,5 +1,5 @@
 class Movie
-  attr_accessor :name, :rating, :description
+  attr_accessor :name, :link
 
   @@movies = []
 
