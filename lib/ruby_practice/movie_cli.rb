@@ -12,10 +12,10 @@ class MovieCLI
 
   def list
     Movie.all.each_with_index {|movie, index| puts "#{index+1}. #{movie.name}"}
+    puts "To see more info on a specific movie, enter the number of that movie. Otherwise, type \'exit\' when you are done."
   end
 
   def movie
-    puts "To see more info on a specific movie, enter the number of that movie. Otherwise, type \'exit\' when you are done."
     input = nil
     num_of_movies = Movie.all.size
     movies = Movie.all
